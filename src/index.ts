@@ -4,7 +4,8 @@
  * @package  @dazejs/framework
  * @author   Chan Zewail <chanzewail@gmail.com>
  */
-const { Application } = require('@dazejs/framework');
+
+import { Application } from '@dazejs/framework'
 
 /**
  * Create The Application

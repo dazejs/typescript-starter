@@ -1,10 +1,10 @@
 
 import {
-  Controller, Http,
+  Controller, Http, Route
 } from '@dazejs/framework'
 
-@Controller()
-export class Hello {
+@Route()
+export class Hello extends Controller {
   @Http.Get()
   index() {
     return this.render('hello', {

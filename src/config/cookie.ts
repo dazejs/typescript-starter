@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   /** 浏览器的最长保存时间。是一个从服务器当前时刻开始的毫秒数。 */
   maxAge: 0,
 
