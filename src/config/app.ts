@@ -1,23 +1,33 @@
 
-
-export default {
-  /**
+/**
    * HTTP service port
    */
-  port: 8080,
+export const port = 8080
 
-  /**
+/**
    * Encryption Key
    *
    * This key is used by cookie or others
    * should be set to a random, 32 character string
    * if set empty, application will auto set with app started
    */
-  keys: ['SEKRIT1'],
+export const keys = ['SEKRIT1']
 
-  algorithm: 'sha1',
+export const algorithm = 'sha1'
+export const encoding = 'base64'
 
-  encoding: 'base64',
+export const public_enable =  '/'
+
+export const public_prefix = '/'
+export const view_extension = 'njk'
+export const port = 8080
+export const port = 8080
+
+
+
+
+export default {
+ 
 
   /**
    * static server with public path
