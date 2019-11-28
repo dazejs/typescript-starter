@@ -1,5 +1,13 @@
+import Bootstrap from '../provider/bootstrap';
 
 export default {
+  /**
+   * debug mode
+   * 
+   * Be sure to turn debug off in a production environment
+   */
+  debug: true,
+
   /**
    * static server with public path
    *
@@ -9,7 +17,19 @@ export default {
    */
   public: true,
 
-  public_prefix: '/',
+  publicPrefix: '/assets',
+
+
+  /**
+   * Turn on compression
+   * 
+   * compress - enable compression
+   * 
+   * threshold - The compression threshold
+   */
+  compress: true,
+
+  threshold: 1024,
 
   /**
    * View config
@@ -17,36 +37,32 @@ export default {
    * view_extension - The view defaults to the HTML suffix
    */
 
-  view_extension: 'njk',
+  viewExtension: 'html',
 
   /**
    * Cluster
    *
-   * cluster.enable - enable or disable cluster mode
+   * enable - enable or disable cluster mode
    *
-   * cluster.workers - Number of work processes, set to 0 by default using CPU cores
+   * workers - Number of work processes, set to 0 by default using CPU cores
    *
-   * cluster.sticky - ticky session
+   * sticky - ticky session
    */
-  cluster: {
-    enable: false,
-    workers: 0,
-    sticky: false,
-  },
 
-  /**
-   * debug mode
-   */
-  debug: true,
+  cluster: false,
+
+  workers: 0,
+
+  sticky: false,
 
   /**
    * template
    */
-  http_exception_template: {
+  httpErrorTemplate: {
     /* ex: 404: 'errors/404.njk', root path: /views */
   },
 
   providers: [
-    // require.resolve('../provider/bootstrap'),
+    Bootstrap,
   ],
 };
