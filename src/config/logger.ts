@@ -1,5 +1,5 @@
 
-import path from 'path'
+import path from 'path';
 
 export default {
   default: 'console',
