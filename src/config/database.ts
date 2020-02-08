@@ -3,8 +3,8 @@ export default {
     type: 'mysql',
     host: '127.0.0.1',
     user: 'root',
-    password: 'czw1234',
+    password: 'root',
     port: 3306,
-    database: 'orm'
+    database: 'daze'
   },
 };
